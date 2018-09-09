@@ -1,17 +1,9 @@
 language: php
 
 php:
+- 7.0
 - 7.1
 - 7.2
-- nightly
-
-matrix:
-  allow_failures:
-  - php: nightly
-
-branches:
-  only:
-  - develop
 
 before_script:
 - git clone git://github.com/phalcon/cphalcon.git $TRAVIS_BUILD_DIR/vendor/cphalcon

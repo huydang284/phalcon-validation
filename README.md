@@ -1,5 +1,7 @@
 # Advanced validators for PHP Phalcon Framework.
 [![License](https://poser.pugx.org/michele-angioni/phalcon-validators/license)](https://packagist.org/packages/michele-angioni/phalcon-validators)
+[![Build Status](https://travis-ci.org/huydang284/phalcon-validation.svg)](https://travis-ci.org/huydang284/phalcon-validators)
+
 ## Introduction
 
 Advanced Validators adds several new validators to support Phalcon Framework.
