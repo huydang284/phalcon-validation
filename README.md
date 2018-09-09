@@ -1,7 +1,7 @@
 # Advanced validators for PHP Phalcon Framework.
 
 ## Supported Validators
-[Min](#Min)
+[Min](#min)
 
 ### Min
 ```php
