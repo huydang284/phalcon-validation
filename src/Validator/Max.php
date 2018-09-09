@@ -12,7 +12,7 @@ use Phalcon\Validation\Validator;
  * Class Min
  * @package HuyDang\PhalconValidation\Validator
  */
-class Min extends Validator
+class Max extends Validator
 {
     /**
      * Executes the validation
@@ -23,11 +23,11 @@ class Min extends Validator
      */
     public function validate(Validation $validation, $attribute): bool
     {
-        $min = $this->getOption('min', false);
+        $max = $this->getOption('max', false);
         $field = $validation->getValue($attribute);
-        $isPassed = (is_numeric($field) && $field >= $min) ||
-            (is_string($field) && $min >= 0 && strlen($field) >= $min) ||
-            (is_array($field) && $min >= 0 && count($field) >= $min);
+        $isPassed = (is_numeric($field) && $field <= $max) ||
+            (is_string($field) && $max >= 0 && strlen($field) <= $max) ||
+            (is_array($field) && $max >= 0 && count($field) <= $max);
 
         if ($isPassed) {
             return true;
