@@ -3,8 +3,6 @@
 ## Introduction
 
 Advanced Validators adds several new validators to support Phalcon Framework.
-
-[//]: <> (PHP 7.1+ and Phalcon 3.1 are required.)
  
 ## Installation
 
