@@ -9,7 +9,7 @@ use Phalcon\Validation\Message;
 use Phalcon\Validation\Validator;
 
 /**
- * Class Min
+ * Class Max
  * @package HuyDang\PhalconValidation\Validator
  */
 class Max extends Validator
