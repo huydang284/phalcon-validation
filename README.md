@@ -13,6 +13,8 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 
 [Max](#max)
 
+[AlphaDash](#alphadash)
+
 ### Min
 ```php
 use \HuyDang\PhalconValidation\Validator\Min;
@@ -43,6 +45,28 @@ $validation = new Validation();
 $validation->add('field',
     new Max([
         'max' => $max,
+        'message' => 'Error message'
+    ]));
+
+$messages = $validation->validate([
+    'field' => $field
+]);
+
+if ($messages->count() > 0) {
+    // field is not passed
+} else {
+    // field is passed
+}
+```
+
+### AlphaDash
+
+```php
+use \HuyDang\PhalconValidation\Validator\AlphaDash;
+
+$validation = new Validation();
+$validation->add('field',
+    new AlphaDash([
         'message' => 'Error message'
     ]));
 
