@@ -21,6 +21,8 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 
 [IpV4](#ipv4)
 
+[IpV6](#ipv6)
+
 ### Min
 ```php
 use \HuyDang\PhalconValidation\Validator\Min;
@@ -141,6 +143,28 @@ use \HuyDang\PhalconValidation\Validator\IpV4;
 $validation = new Validation();
 $validation->add('field',
     new IpV4([
+        'message' => 'Error message'
+    ]));
+
+$messages = $validation->validate([
+    'field' => $field
+]);
+
+if ($messages->count() > 0) {
+    // field is not passed
+} else {
+    // field is passed
+}
+```
+
+### IpV6
+
+```php
+use \HuyDang\PhalconValidation\Validator\IpV6;
+
+$validation = new Validation();
+$validation->add('field',
+    new IpV6([
         'message' => 'Error message'
     ]));
 
