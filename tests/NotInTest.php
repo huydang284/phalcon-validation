@@ -40,7 +40,7 @@ class NotInTest extends TestCase
      * @param $notIn
      * @param $passed
      */
-    public function testMaxValidator($field, $notIn, $passed)
+    public function testNotInValidator($field, $notIn, $passed)
     {
         $validation = new Validation();
         $validation->add('field',

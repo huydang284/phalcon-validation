@@ -40,7 +40,7 @@ class InTest extends TestCase
      * @param $in
      * @param $passed
      */
-    public function testMaxValidator($field, $in, $passed)
+    public function testInValidator($field, $in, $passed)
     {
         $validation = new Validation();
         $validation->add('field',

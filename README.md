@@ -19,6 +19,8 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 
 [NotIn](#notin)
 
+[IpV4](#ipv4)
+
 ### Min
 ```php
 use \HuyDang\PhalconValidation\Validator\Min;
@@ -108,7 +110,6 @@ if ($messages->count() > 0) {
 }
 ```
 
-
 ### NotIn
 
 ```php
@@ -118,6 +119,28 @@ $validation = new Validation();
 $validation->add('field',
     new NotIn([
         'not_in' => [1, 2, 3],
+        'message' => 'Error message'
+    ]));
+
+$messages = $validation->validate([
+    'field' => $field
+]);
+
+if ($messages->count() > 0) {
+    // field is not passed
+} else {
+    // field is passed
+}
+```
+
+### IpV4
+
+```php
+use \HuyDang\PhalconValidation\Validator\IpV4;
+
+$validation = new Validation();
+$validation->add('field',
+    new IpV4([
         'message' => 'Error message'
     ]));
 
