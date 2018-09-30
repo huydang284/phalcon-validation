@@ -11,7 +11,7 @@ use Phalcon\Validation\Validator;
  * Class AlphaDash
  * @package HuyDang\PhalconValidation\Validator
  */
-class AlphaDash extends Validator
+class Json extends Validator
 {
     /**
      * Executes the validation
@@ -22,9 +22,7 @@ class AlphaDash extends Validator
      */
     public function validate(\Phalcon\Validation $validation, $attribute): bool
     {
-        $alphaDashRegex = '/^[a-zA-Z_]+$/';
-
-        if (@preg_match($alphaDashRegex, $validation->getValue($attribute))) {
+        if ($this->isJson($validation->getValue($attribute))) {
             return true;
         }
 
@@ -32,5 +30,17 @@ class AlphaDash extends Validator
         $validation->appendMessage(new Message($message, $attribute));
 
         return false;
+    }
+
+    /**
+     * Check if string is valid json
+     * @param string $string
+     * @return bool
+     */
+    private function isJson(string $string):bool
+    {
+        json_decode($string);
+
+        return (json_last_error() == JSON_ERROR_NONE);
     }
 }
