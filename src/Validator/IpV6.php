@@ -7,6 +7,10 @@ namespace HuyDang\PhalconValidation\Validator;
 use Phalcon\Validation\Message;
 use Phalcon\Validation\Validator;
 
+/**
+ * Class IpV6
+ * @package HuyDang\PhalconValidation\Validator
+ */
 class IpV6 extends Validator
 {
     /**

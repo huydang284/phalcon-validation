@@ -8,7 +8,7 @@ use Phalcon\Validation\Message;
 use Phalcon\Validation\Validator;
 
 /**
- * Class AlphaDash
+ * Class Json
  * @package HuyDang\PhalconValidation\Validator
  */
 class Json extends Validator

@@ -7,6 +7,10 @@ namespace HuyDang\PhalconValidation\Validator;
 use Phalcon\Validation\Message;
 use Phalcon\Validation\Validator;
 
+/**
+ * Class In
+ * @package HuyDang\PhalconValidation\Validator
+ */
 class In extends Validator
 {
     /**
