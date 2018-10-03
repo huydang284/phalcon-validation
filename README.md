@@ -18,6 +18,7 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 - [IpV6](#ipv6)
 - [Json](#json)
 - [Filled](#filled)
+- [Timezone](#timezone)
 
 ### Min
 
@@ -236,5 +237,29 @@ if ($messages->count() > 0) {
     // field is not passed
 } else {
     // field is passed
+}
+```
+
+### Timezone
+
+The field under validation must be a valid timezone identifier according to the `timezone_identifiers_list` PHP function.
+
+```php
+use \HuyDang\PhalconValidation\Validator\Timezone;
+
+$validation = new Validation();
+$validation->add('field',
+    new Timezone([
+        'message' => 'Error message'
+    ]));
+
+$messages = $validation->validate([
+    'field' => $timezone
+]);
+
+if ($messages->count() > 0) {
+    // invalid timezone
+} else {
+    // valid timezone
 }
 ```
