@@ -25,7 +25,12 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 
 [Json](#json)
 
+[Filled](#filled)
+
 ### Min
+
+The field under validation must have a minimum value. For string data, value corresponds to the number of characters. For numeric data, value corresponds to a given integer value. For an array, size corresponds to the count of the array.
+
 ```php
 use \HuyDang\PhalconValidation\Validator\Min;
 
@@ -48,6 +53,9 @@ if ($messages->count() > 0) {
 ```
 
 ### Max
+
+The field under validation must be less than or equal to a maximum value. For string data, value corresponds to the number of characters. For numeric data, value corresponds to a given integer value. For an array, size corresponds to the count of the array.
+
 ```php
 use \HuyDang\PhalconValidation\Validator\Max;
 
@@ -71,6 +79,8 @@ if ($messages->count() > 0) {
 
 ### AlphaDash
 
+The field under validation may have alpha-numeric characters, as well as dashes and underscores.
+
 ```php
 use \HuyDang\PhalconValidation\Validator\AlphaDash;
 
@@ -92,6 +102,8 @@ if ($messages->count() > 0) {
 ```
 
 ### In
+
+The field under validation must be included in the given list of values. 
 
 ```php
 use \HuyDang\PhalconValidation\Validator\In;
@@ -116,6 +128,8 @@ if ($messages->count() > 0) {
 
 ### NotIn
 
+The field under validation must not be included in the given list of values.
+
 ```php
 use \HuyDang\PhalconValidation\Validator\NotIn;
 
@@ -139,6 +153,8 @@ if ($messages->count() > 0) {
 
 ### IpV4
 
+The field under validation must be an IPv4 address.
+
 ```php
 use \HuyDang\PhalconValidation\Validator\IpV4;
 
@@ -160,6 +176,8 @@ if ($messages->count() > 0) {
 ```
 
 ### IpV6
+
+The field under validation must be an IPv6 address.
 
 ```php
 use \HuyDang\PhalconValidation\Validator\IpV6;
@@ -183,12 +201,38 @@ if ($messages->count() > 0) {
 
 ### Json
 
+The field under validation must be a valid JSON string.
+
 ```php
 use \HuyDang\PhalconValidation\Validator\Json;
 
 $validation = new Validation();
 $validation->add('field',
     new Json([
+        'message' => 'Error message'
+    ]));
+
+$messages = $validation->validate([
+    'field' => $field
+]);
+
+if ($messages->count() > 0) {
+    // field is not passed
+} else {
+    // field is passed
+}
+```
+
+### Filled
+
+The field under validation must not be empty when it is present.
+
+```php
+use \HuyDang\PhalconValidation\Validator\Filled;
+
+$validation = new Validation();
+$validation->add('field',
+    new Filled([
         'message' => 'Error message'
     ]));
 
