@@ -9,14 +9,15 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 ## Installation
 
 ## Supported Validators
-
-|||
-|---|---|
-|[Min](#min)|[Max](#max)|
-|[AlphaDash](#alphadash)|[In](#in)|
-|[NotIn](#notin)|[IpV4](#ipv4)|
-|[IpV6](#ipv6)|[Json](#json)|
-|[Filled](#filled)||
+- [Min](#min)
+- [Max](#max)
+- [AlphaDash](#alphadash)
+- [In](#in)
+- [NotIn](#notin)
+- [IpV4](#ipv4)
+- [IpV6](#ipv6)
+- [Json](#json)
+- [Filled](#filled)
 
 ### Min
 
