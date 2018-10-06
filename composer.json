@@ -1,6 +1,7 @@
 {
   "name": "huydang/phalcon-validation",
   "description": "Advanced validators for PHP Phalcon Framework.",
+  "keywords": ["phalcon", "validation", "validator"],
   "type": "library",
   "license": "MIT",
   "authors": [
