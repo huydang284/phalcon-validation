@@ -265,7 +265,7 @@ if ($messages->count() > 0) {
 }
 ```
 
-### Timezone
+### Image
 
 The file under validation must be an image.
 
