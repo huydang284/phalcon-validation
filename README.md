@@ -19,6 +19,7 @@ Advanced Validators adds several new validators to support Phalcon Framework.
 - [Json](#json)
 - [Filled](#filled)
 - [Timezone](#timezone)
+- [Image](#image)
 
 ### Min
 
@@ -261,5 +262,29 @@ if ($messages->count() > 0) {
     // invalid timezone
 } else {
     // valid timezone
+}
+```
+
+### Timezone
+
+The file under validation must be an image.
+
+```php
+use \HuyDang\PhalconValidation\Validator\Image;
+
+$validation = new Validation();
+$validation->add('file',
+    new Image([
+        'message' => 'Error message'
+    ]));
+
+$messages = $validation->validate([
+    'file' => $file
+]);
+
+if ($messages->count() > 0) {
+    // not an image
+} else {
+    // valid image
 }
 ```
