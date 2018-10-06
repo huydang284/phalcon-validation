@@ -7,6 +7,10 @@
 Advanced Validators adds several new validators to support Phalcon Framework.
  
 ## Installation
+Install via composer
+``` 
+composer require huydang/phalcon-validation
+```
 
 ## Supported Validators
 - [Min](#min)
