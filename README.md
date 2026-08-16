@@ -1,4 +1,6 @@
 # Advanced validators for PHP Phalcon Framework.
+# Advanced validators for PHP Phalcon Framework.
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/huydang)
 [![License](https://poser.pugx.org/michele-angioni/phalcon-validators/license)](https://packagist.org/packages/michele-angioni/phalcon-validators)
 [![Build Status](https://travis-ci.org/huydang284/phalcon-validation.svg)](https://travis-ci.org/huydang284/phalcon-validators)
 
